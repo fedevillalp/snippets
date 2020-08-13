@@ -60,6 +60,18 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#create-a-new-table">Create a New Table</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#select-multiple-columns">Select Multiple Columns</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#show-the-contents-of-a-column-in-a-dataframe-without-truncating">Show the Contents of a Column in a Dataframe without truncating</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get-summary-statistics-from-one-specific-column-of-a-dataframe">Get summary statistics from one specific column of a DataFrame</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#return-the-mean-of-a-single-column">Return the Mean of a Single Column</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#insert-data-into-existing-table">Insert Data Into Existing Table</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-user-defined-function-udf">Create a User Defined Function (UDF)</a>
+    </li>
     </ul>
                     </li>
                 </ul>
@@ -111,6 +123,94 @@ CREATE TABLE IF NOT EXISTS {database_name}.{table_name}
   (column_name_1 STRING, column_name_2 STRING, column_name_3 INT)
 &quot;&quot;&quot;
 )
+</code></pre>
+
+<hr />
+<h2 id="select-multiple-columns">Select Multiple Columns</h2>
+<pre><code class="python">#Names of the columns to be selected
+array_of_columns = ['column_name_1', 'column_name_2', 'column_name_n' ]
+
+#Pass an array to the .select() method
+new_data_frame = data_frame.select([x for x in array_of_columns])
+</code></pre>
+
+<hr />
+<h2 id="show-the-contents-of-a-column-in-a-dataframe-without-truncating">Show the Contents of a Column in a Dataframe without truncating</h2>
+<pre><code class="python">df.show(df.count(), False)
+</code></pre>
+
+<hr />
+<h2 id="get-summary-statistics-from-one-specific-column-of-a-dataframe">Get summary statistics from one specific column of a DataFrame</h2>
+<pre><code class="python">result = df.select('column_name').describe().collect()
+</code></pre>
+
+<hr />
+<h2 id="return-the-mean-of-a-single-column">Return the Mean of a Single Column</h2>
+<pre><code class="python">from pyspark.sql.functions import mean as _mean, stddev as _stddev, col
+
+df_stats = df.select(
+    _mean(col('total')).alias('mean'),
+    _stddev(col('total')).alias('std')
+).collect()
+
+mean = df_stats[0]['mean']
+std = df_stats[0]['std']
+
+print(mean, std)
+</code></pre>
+
+<hr />
+<h2 id="insert-data-into-existing-table">Insert Data Into Existing Table</h2>
+<ul>
+<li>
+<p>First make sure that your table exists. See "Create a New Table".</p>
+</li>
+<li>
+<p>Once your table exists you can proceed to insert data.</p>
+</li>
+<li>
+<p>Note that you need an active spark context.</p>
+</li>
+</ul>
+<pre><code class="python">database_name = 'database_name'
+table_name = 'table_name'
+
+# Make sure your data follows the correct table structure
+
+# Respect the data types of each column:
+# In this case the table has 5 columns and we are inserting 4 new rows
+# Note how Col1 and Col 4 are type INT. Col2 and Col3 and Col5 are type STRING.
+
+spark.sql(f&quot;&quot;&quot;
+INSERT INTO TABLE {database_name}.{table_name}
+VALUES (11, 'Jon', 'Loyd', 25, 'Math'),
+       (22, 'Frank', 'Mayer', 25, 'Math'),
+       (33, 'Mary', 'Sten', 34, 'Chemistry'),
+       (44, 'Arthur'  , 'Welmer', 38, 'Chemistry'),
+&quot;&quot;&quot;
+)
+</code></pre>
+
+<hr />
+<h2 id="create-a-user-defined-function-udf">Create a User Defined Function (UDF)</h2>
+<p>First Import <code>UDF</code> and <code>types</code>. Then define your <code>UDF</code> just like you would define a function in python. Before using a <code>UDF</code> you have to register it with Spark and specify what type it will return. In this example we are returning an <code>IntegerType()</code>. If any other type is returned it will cause an error.</p>
+<p>Finally, to use a <code>UDF</code>, we call the method <code>.withColumn()</code> and specify a) the name of the new column where the output of the <code>UDF</code> will be deposited and b) the <code>UDF</code> to apply. The arguments of the <code>UDF</code> are the names of the existing DataFrame columns containing the data that the UDF will consume.</p>
+<pre><code class="python"># 1. Make sure you import udf and the correct type.
+from pyspark.sql.functions import udf
+# Can also use * to import ALL types instead of only IntegerType
+from pyspark.sql.types import IntegerType
+
+# 2. Create your UDF
+def user_defined_function(arg_1, arg_2):
+    #arg_1 will correspond to existing_col_1 and arg_2 will correspond to existing_col_2
+    result = arg_1 + arg_2
+    return result
+
+# 3. Register your UDF with Spark
+my_spark_UDF = udf(user_defined_function, IntegerType())
+
+# 4. Apply your UDF to a column and specify the name of the results column
+result_dataframe = data_frame.withColumn(&quot;result&quot;, my_spark_UDF('existing_col_1', 'existing_col_2'))
 </code></pre>
               
             </div>

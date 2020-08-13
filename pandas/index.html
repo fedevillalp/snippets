@@ -60,7 +60,7 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#drop-null-values-only-if-all-values-are-null-in-a-row">Drop null values only if ALL values are null in a row:</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#drop-the-null-values-only-in-the-selected-columns">Drop the null values only in the selected columns</a>
+    <li class="toctree-l3"><a class="reference internal" href="#drop-the-null-values-only-in-the-selected-columns">Drop the null values ONLY in the selected columns</a>
     </li>
         </ul>
     </li>
@@ -119,7 +119,7 @@
 </code></pre>
 
 <hr />
-<h4 id="drop-the-null-values-only-in-the-selected-columns">Drop the <code>null</code> values only in the selected columns</h4>
+<h4 id="drop-the-null-values-only-in-the-selected-columns">Drop the <code>null</code> values ONLY in the selected columns</h4>
 <pre><code class="python">df.na.drop(&quot;all&quot;, Seq(&quot;col1&quot;, &quot;col2&quot;, &quot;col3&quot;))
 </code></pre>
               

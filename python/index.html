@@ -64,6 +64,8 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#install-a-virtual-environment">Install a Virtual Environment</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#list-files-in-current-directory">List files in current directory</a>
+    </li>
     </ul>
                     </li>
                 </ul>
@@ -125,6 +127,21 @@ lsvirtualenv
 </code></pre>
 
 <p>Reference: https://python-guide-ru.readthedocs.io/en/latest/dev/virtualenvs.html</p>
+<hr />
+<h2 id="list-files-in-current-directory">List files in current directory</h2>
+<pre><code class="python">import os
+
+#Collect all files in present working directory
+files = [file for file in os.listdir('.') if os.path.isfile(file)]
+
+#Print all files
+for file in files:
+    print(file)
+</code></pre>
+
+<p>If you need to list files in a directory other than the present working directory:</p>
+<pre><code class="python">files = [file for file in os.path.isfile(os.path.join(another_directory, file))]
+</code></pre>
               
             </div>
           </div>
