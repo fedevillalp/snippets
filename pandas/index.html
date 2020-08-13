@@ -64,6 +64,8 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#select-multiple-columns-from-existing-dataframe">Select Multiple Columns From Existing Dataframe</a>
+    </li>
     </ul>
                     </li>
                 </ul>
@@ -121,6 +123,13 @@
 <hr />
 <h4 id="drop-the-null-values-only-in-the-selected-columns">Drop the <code>null</code> values ONLY in the selected columns</h4>
 <pre><code class="python">df.na.drop(&quot;all&quot;, Seq(&quot;col1&quot;, &quot;col2&quot;, &quot;col3&quot;))
+</code></pre>
+
+<hr />
+<h2 id="select-multiple-columns-from-existing-dataframe">Select Multiple Columns From Existing Dataframe</h2>
+<p>To select only certain columns from an existing Dataframe just pass it a list of columns</p>
+<pre><code class="python">list_of_columns = ['col_name_1', 'col_name_2', 'col_name_n']
+df = df['list_of_columns']
 </code></pre>
               
             </div>
