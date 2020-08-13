@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Pyspark - Quick Code Snippets</title>
+  <title>Python - Quick Code Snippets</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Pyspark";
-    var mkdocs_page_input_path = "pyspark.md";
+    var mkdocs_page_name = "Python";
+    var mkdocs_page_input_path = "python.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -55,18 +55,16 @@
                     <li class="toctree-l1"><a class="reference internal" href="../pandas/">Pandas</a>
                     </li>
                 </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Pyspark</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#create-new-table">Create New Table</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#dcreate-new-table">dCreate New Table</a>
-    </li>
-    </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../pyspark/">Pyspark</a>
                     </li>
                 </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../python/">Python</a>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Python</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#install-a-virtual-environment">Install a Virtual Environment</a>
+    </li>
+    </ul>
                     </li>
                 </ul>
       </div>
@@ -90,7 +88,7 @@
     
       
     
-    <li>Pyspark</li>
+    <li>Python</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -102,35 +100,28 @@
             <div class="section">
               
                 <h1 id="_1"></h1>
-<h2 id="create-new-table">Create New Table</h2>
-<p>https://docs.readthedocs.io/en/stable/intro/getting-started-with-mkdocs.html</p>
-<pre><code class="python">def fn():
-    pass
-</code></pre>
+<h2 id="install-a-virtual-environment">Install a Virtual Environment</h2>
+<pre><code class="python">#1. Install virtual env
+pip install virtualenv
 
-<pre><code class="python">    database_name = 'my_database'
-    table_name = 'my_table'
+#2. Create a virual environment in the folder of your choice
+cd your_folder
+virtualenv name_of_your_virtual_environment
 
-    # Make sure you specity the Type of each column
+#3. Activate your virtual environment
+source name_of_your_virtual_environment/bin/activate
 
-    spark.sql(f&quot;&quot;&quot;
-    CREATE TABLE IF NOT EXISTS {database_name}.{table_name}
-      (column_name_1 STRING, column_name_2 STRING, column_name_n INT)
-    &quot;&quot;&quot;
-    )
-</code></pre>
+#4 Now you can install pip packages in your virtual environment
+pip install your_new_package
 
-<h2 id="dcreate-new-table">dCreate New Table</h2>
-<pre><code>    database_name = 'my_database'
-    table_name = 'my_table'
+#5. When done, deactivate your virtual environment. You need to be in your_folder directory.
+deactivate
 
-    # Make sure you specity the Type of each column
+#6. To delete your virtual environment just delete your_folder directory
+rm -rf name_of_your_virtual_environment
 
-    spark.sql(f"""
-    CREATE TABLE IF NOT EXISTS {database_name}.{table_name}
-      (column_name_1 STRING, column_name_2 STRING, column_name_n INT)
-    """
-    )
+#7 To list all your virtual environments
+lsvirtualenv
 </code></pre>
               
             </div>
@@ -139,10 +130,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../python/" class="btn btn-neutral float-right" title="Python">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../pandas/" class="btn btn-neutral" title="Pandas"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../pyspark/" class="btn btn-neutral" title="Pyspark"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -168,10 +157,8 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../pandas/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../pyspark/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../python/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
