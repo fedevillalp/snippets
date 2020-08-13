@@ -48,7 +48,7 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
                     </li>
                 </ul>
                 <ul>
@@ -58,9 +58,7 @@
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Pyspark</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#create-new-table">Create New Table</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#dcreate-new-table">dCreate New Table</a>
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-new-table">Create a New Table</a>
     </li>
     </ul>
                     </li>
@@ -102,35 +100,17 @@
             <div class="section">
               
                 <h1 id="_1"></h1>
-<h2 id="create-new-table">Create New Table</h2>
-<p>https://docs.readthedocs.io/en/stable/intro/getting-started-with-mkdocs.html</p>
-<pre><code class="python">def fn():
-    pass
-</code></pre>
+<h2 id="create-a-new-table">Create a New Table</h2>
+<p>Once you have instantiated your <code>spark context</code> you can use its <code>sql</code> method to pass SQL commands. In this case we use the <code>sql</code> command <code>CREATE TABLE IF NOT EXISTS</code> to create a new database &lt;&lt; my_database &gt;&gt; and a new table &lt;&lt; my_table &gt;&gt;. Note how we must specify the name and the type of the new columns.</p>
+<pre><code class="python">database_name = 'my_database'
+table_name = 'my_table'
 
-<pre><code class="python">    database_name = 'my_database'
-    table_name = 'my_table'
-
-    # Make sure you specity the Type of each column
-
-    spark.sql(f&quot;&quot;&quot;
-    CREATE TABLE IF NOT EXISTS {database_name}.{table_name}
-      (column_name_1 STRING, column_name_2 STRING, column_name_n INT)
-    &quot;&quot;&quot;
-    )
-</code></pre>
-
-<h2 id="dcreate-new-table">dCreate New Table</h2>
-<pre><code>    database_name = 'my_database'
-    table_name = 'my_table'
-
-    # Make sure you specity the Type of each column
-
-    spark.sql(f"""
-    CREATE TABLE IF NOT EXISTS {database_name}.{table_name}
-      (column_name_1 STRING, column_name_2 STRING, column_name_n INT)
-    """
-    )
+# Make sure you specify the name and Type of each column
+spark.sql(f&quot;&quot;&quot;
+CREATE TABLE IF NOT EXISTS {database_name}.{table_name}
+  (column_name_1 STRING, column_name_2 STRING, column_name_3 INT)
+&quot;&quot;&quot;
+)
 </code></pre>
               
             </div>

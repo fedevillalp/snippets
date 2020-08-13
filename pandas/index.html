@@ -48,21 +48,21 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
                     </li>
                 </ul>
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Pandas</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#cum-nova-in-habet-tenebat">Cum nova in habet tenebat</a>
+    <li class="toctree-l2"><a class="reference internal" href="#drop-null-values">Drop Null Values</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#drop-the-rows-in-which-any-value-is-null">Drop the rows in which ANY value is null:</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#magna-utrumque">Magna utrumque</a>
+    <li class="toctree-l3"><a class="reference internal" href="#drop-null-values-only-if-all-values-are-null-in-a-row">Drop null values only if ALL values are null in a row:</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#plumis-non-exstitit-motu-euntem-saepe-primo">Plumis non exstitit motu euntem saepe primo</a>
+    <li class="toctree-l3"><a class="reference internal" href="#drop-the-null-values-only-in-the-selected-columns">Drop the null values only in the selected columns</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#nemorisque-obvius">Nemorisque obvius</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#date-places-imagine-sunt-unius-plurima-otia">Date places imagine Sunt unius plurima otia</a>
+        </ul>
     </li>
     </ul>
                     </li>
@@ -107,54 +107,21 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="aether-plura">Aether plura</h1>
-<h2 id="cum-nova-in-habet-tenebat">Cum nova in habet tenebat</h2>
-<p>Lorem markdownum ursos, ego ope tendere sine omnis inque, tibi igne, quod.
-Altera in fulvum dominae tempore increpuit quamquam, uris tangam. Defensae ture.</p>
-<h2 id="magna-utrumque">Magna utrumque</h2>
-<p>Ipse adspice sollicitatque sepulcro limen feres plumis recentis <strong>venienti</strong>,
-una carmina visa: <strong>trepidans crimine</strong> quamque, par. Similes aurum ira columnae
-moror hauserit <em>in rubentis</em> membrana accensus labentibus.</p>
-<h2 id="plumis-non-exstitit-motu-euntem-saepe-primo">Plumis non exstitit motu euntem saepe primo</h2>
-<p>Cecropio versarunt hactenus manet. Enim mentita, <em>periclis</em> mihi. Agat Isthmon
-aures exegit augusta ut dubitare aurum nepotem admovet. Longique saepe fuit per
-telum saevi inde pennas Olympi Phineus et forte ex loquendi Lucina bipennem,
-opem pars constiterat.</p>
-<ol>
-<li>Inde lacus de mentis Daphnes residens lumina</li>
-<li>Nec dapes carissime Taenarides clauserat gelido deus</li>
-<li>Dixit perire</li>
-<li>Quam nunc opem nos ora novissima</li>
-</ol>
-<h2 id="nemorisque-obvius">Nemorisque obvius</h2>
-<p>Elicuere abstulit <em>populi</em>. Est fluentia mihi sigillis, sollertius sibi
-iuncisque <em>et Boreae</em> consilii, patulas quid vidit. Geminos membraque ferre, non
-periura, in casus nataque sustollit quid iuro.</p>
-<p>Vindicis tamen coeunt capellae silva vulnera fluctus palustres tremulis, annis
-exstincta ille <a href="http://magistra-polyxena.net/rogat-propinquae">memorant</a>: mens,
-cum parentis. Sororis Aeacides: ab tota: avidum pan deteriora Theseus cum templa
-vulnusque praefixo armaque silices per. Semina et ista peremit, <a href="http://quid.org/">ferasque
-quod</a> mihi deripit tinnitibus?</p>
-<h2 id="date-places-imagine-sunt-unius-plurima-otia">Date places imagine Sunt unius plurima otia</h2>
-<p>Si altera lacus, nostri et certo nil Minervae, modo viaque plena pulvere matrum
-genitor, expositum cogente. Idque saevaeque laetus solitas iterque recentibus
-dignus dominis umbrosa, per.</p>
-<pre><code>cable.addressVersionThermistor = 3;
-scrollingApiPc += swappable_netbios_web - busLinkRich.osiOcrLog(
-        oasis_hacker.memory(4, proxy, reimage), domain_file_encryption(3,
-        thunderbolt, friend), 86);
-if (54) {
-    protocol_pipeline += 62;
-}
-var rfidBatchComputer = userPush.power(wimaxPropertyBatch, zone_bankruptcy(
-        2), aiff_heuristic(marketing, 27) + avatarCableDdr(boot));
+                <h1 id="_1"></h1>
+<h2 id="drop-null-values">Drop Null Values</h2>
+<h4 id="drop-the-rows-in-which-any-value-is-null">Drop the rows in which ANY value is <code>null</code>:</h4>
+<pre><code class="python">data_frame = data_frame.na.drop(&quot;any&quot;)
 </code></pre>
-<p>Vires ardua pectus lingua tenebant: viridi ubi amore, disque <strong>hanc emisitque
-socialia</strong> elidite gaudebat mendacis; cum. Prope unda negabit condiderant irata,
-undis echidnae misit sequitur, per nec: non est pede sensu cornu? Et
-<a href="http://nescia.net/">negabo</a>, vel cruore robore protinus tetigit illic tutam
-placet illa formam quaerit. Mutua siquid, libasse facio tanti in remove temporis
-auspiciis, quaerenti.</p>
+
+<hr />
+<h4 id="drop-null-values-only-if-all-values-are-null-in-a-row">Drop <code>null</code> values only if ALL values are <code>null</code> in a row:</h4>
+<pre><code class="python">df.na.drop(&quot;all&quot;)
+</code></pre>
+
+<hr />
+<h4 id="drop-the-null-values-only-in-the-selected-columns">Drop the <code>null</code> values only in the selected columns</h4>
+<pre><code class="python">df.na.drop(&quot;all&quot;, Seq(&quot;col1&quot;, &quot;col2&quot;, &quot;col3&quot;))
+</code></pre>
               
             </div>
           </div>
@@ -165,7 +132,7 @@ auspiciis, quaerenti.</p>
         <a href="../pyspark/" class="btn btn-neutral float-right" title="Pyspark">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href=".." class="btn btn-neutral" title="Welcome"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
