@@ -15,7 +15,7 @@
     
     
       
-        <title>Pyspark - Dr. Data</title>
+        <title>Pyspark - The Data Scientist</title>
       
     
     
@@ -60,7 +60,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href=".." title="Dr. Data" class="md-header-nav__button md-logo" aria-label="Dr. Data">
+    <a href=".." title="The Data Scientist" class="md-header-nav__button md-logo" aria-label="The Data Scientist">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -73,7 +73,7 @@
       
         <div class="md-header-nav__ellipsis">
           <span class="md-header-nav__topic md-ellipsis">
-            Dr. Data
+            The Data Scientist
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
@@ -134,13 +134,13 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Dr. Data" class="md-nav__button md-logo" aria-label="Dr. Data">
+    <a href=".." title="The Data Scientist" class="md-nav__button md-logo" aria-label="The Data Scientist">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    Dr. Data
+    The Data Scientist
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -224,6 +224,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#display-the-contents-of-select-columns-only" class="md-nav__link">
+    Display the Contents of Select Columns Only
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-the-data-types-of-all-columns" class="md-nav__link">
+    Display the Data Types of all Columns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#show-the-contents-of-a-column-in-a-dataframe-without-truncating" class="md-nav__link">
     Show the Contents of a Column in a Dataframe without truncating
   </a>
@@ -233,6 +247,41 @@
         <li class="md-nav__item">
   <a href="#get-summary-statistics-from-one-specific-column-of-a-dataframe" class="md-nav__link">
     Get summary statistics from one specific column of a DataFrame
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-histogram" class="md-nav__link">
+    Create a Histogram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#left-join-two-dataframes" class="md-nav__link">
+    Left Join two DataFrames
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#count-number-of-nans-or-nulls-in-dataframes" class="md-nav__link">
+    Count number of NaN's or Null's in DataFrames
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#count-the-number-of-duplicates-in-a-dataframes" class="md-nav__link">
+    Count the number of duplicates in a DataFrames
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#take-random-samples-from-a-dataframe" class="md-nav__link">
+    Take Random Samples from a DataFrame
   </a>
   
 </li>
@@ -277,6 +326,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../sql/" title="SQL" class="md-nav__link">
+      SQL
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -317,6 +378,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#display-the-contents-of-select-columns-only" class="md-nav__link">
+    Display the Contents of Select Columns Only
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-the-data-types-of-all-columns" class="md-nav__link">
+    Display the Data Types of all Columns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#show-the-contents-of-a-column-in-a-dataframe-without-truncating" class="md-nav__link">
     Show the Contents of a Column in a Dataframe without truncating
   </a>
@@ -326,6 +401,41 @@
         <li class="md-nav__item">
   <a href="#get-summary-statistics-from-one-specific-column-of-a-dataframe" class="md-nav__link">
     Get summary statistics from one specific column of a DataFrame
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-histogram" class="md-nav__link">
+    Create a Histogram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#left-join-two-dataframes" class="md-nav__link">
+    Left Join two DataFrames
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#count-number-of-nans-or-nulls-in-dataframes" class="md-nav__link">
+    Count number of NaN's or Null's in DataFrames
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#count-the-number-of-duplicates-in-a-dataframes" class="md-nav__link">
+    Count the number of duplicates in a DataFrames
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#take-random-samples-from-a-dataframe" class="md-nav__link">
+    Take Random Samples from a DataFrame
   </a>
   
 </li>
@@ -394,11 +504,30 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#Names of the columns to be selected</span>
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Names of the columns to be selected</span>
 <span class="n">array_of_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;column_name_1&#39;</span><span class="p">,</span> <span class="s1">&#39;column_name_2&#39;</span><span class="p">,</span> <span class="s1">&#39;column_name_n&#39;</span> <span class="p">]</span>
 
-<span class="c1">#Pass an array to the .select() method</span>
+<span class="c1"># Pass an array to the .select() method</span>
 <span class="n">new_data_frame</span> <span class="o">=</span> <span class="n">data_frame</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">array_of_columns</span><span class="p">])</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="display-the-contents-of-select-columns-only">Display the Contents of Select Columns Only</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">array_of_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;column_name_1&#39;</span><span class="p">,</span><span class="s1">&#39;col_name_2&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">array_of_columns</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1">#Can include  a .describe() method if you want the stats for that array_of_columns</span>
+<span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">array_of_columns</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+
+<h2 id="display-the-data-types-of-all-columns">Display the Data Types of all Columns</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">dataframe</span><span class="o">.</span><span class="n">dtypes</span>
 </code></pre></div>
 </td></tr></table>
 
@@ -411,6 +540,99 @@
 <hr />
 <h2 id="get-summary-statistics-from-one-specific-column-of-a-dataframe">Get summary statistics from one specific column of a DataFrame</h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;column_name&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="create-a-histogram">Create a Histogram</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Use Spark&#39;s `histogram` function from the RDD API</span>
+<span class="n">number_of_bins</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="n">my_histogram</span> <span class="o">=</span> <span class="p">(</span><span class="n">data_frame</span>
+                <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;column_name&#39;</span><span class="p">)</span>
+                <span class="o">.</span><span class="n">rdd</span>
+                <span class="o">.</span><span class="n">flatMap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">record</span><span class="p">:</span> <span class="n">record</span><span class="p">)</span>
+                <span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">number_of_bins</span><span class="p">)</span>
+                <span class="p">)</span>
+
+<span class="c1"># Load the my_historgam into a Pandas DataFrame for plotting</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">my_histogram</span><span class="p">)),</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;bin&#39;</span><span class="p">,</span> <span class="s1">&#39;frequency&#39;</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span>
+    <span class="s1">&#39;bin&#39;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="left-join-two-dataframes">Left Join two DataFrames</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;column_name_to_join&#39;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="count-number-of-nans-or-nulls-in-dataframes">Count number of NaN's or Null's in DataFrames</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">isnan</span><span class="p">,</span> <span class="n">when</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">col</span>
+
+<span class="n">fraction_engaged</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="n">count</span><span class="p">(</span><span class="n">when</span><span class="p">(</span><span class="n">isnan</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">|</span> <span class="n">col</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">isNull</span><span class="p">(),</span> <span class="n">x</span><span class="p">))</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">fraction_engaged</span><span class="o">.</span><span class="n">columns</span><span class="p">])</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+
+<h2 id="count-the-number-of-duplicates-in-a-dataframes">Count the number of duplicates in a DataFrames</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">as</span> <span class="nn">f</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>\
+    <span class="o">.</span><span class="n">count</span><span class="p">()</span>\
+    <span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>\
+    <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">))</span>\
+    <span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="take-random-samples-from-a-dataframe">Take Random Samples from a DataFrame</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#Limit the number of samples to 2000</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">2000</span>
+<span class="c1">#Specify the number of samples as a fraction of the total</span>
+<span class="n">fraction</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+<span class="n">samples</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="n">fraction</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+
+<span class="c1">#Double check the total</span>
+<span class="n">samples</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 </code></pre></div>
 </td></tr></table>
 

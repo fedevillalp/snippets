@@ -15,7 +15,7 @@
     
     
       
-        <title>Pandas - Dr. Data</title>
+        <title>Pandas - The Data Scientist</title>
       
     
     
@@ -60,7 +60,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href=".." title="Dr. Data" class="md-header-nav__button md-logo" aria-label="Dr. Data">
+    <a href=".." title="The Data Scientist" class="md-header-nav__button md-logo" aria-label="The Data Scientist">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -73,7 +73,7 @@
       
         <div class="md-header-nav__ellipsis">
           <span class="md-header-nav__topic md-ellipsis">
-            Dr. Data
+            The Data Scientist
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
@@ -134,13 +134,13 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Dr. Data" class="md-nav__button md-logo" aria-label="Dr. Data">
+    <a href=".." title="The Data Scientist" class="md-nav__button md-logo" aria-label="The Data Scientist">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    Dr. Data
+    The Data Scientist
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -198,6 +198,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#display-all-the-rows-of-a-pandas-dataframe" class="md-nav__link">
+    Display ALL the rows of a Pandas DataFrame
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-all-the-contents-in-the-rows-of-a-pandas-dataframe" class="md-nav__link">
+    Display ALL the contents in the rows of a Pandas DataFrame
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#drop-null-values" class="md-nav__link">
     Drop Null Values
   </a>
@@ -219,6 +233,26 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#percentage-of-a-dataframe" class="md-nav__link">
+    Percentage of a DataFrame
+  </a>
+  
+    <nav class="md-nav" aria-label="Percentage of a DataFrame">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#round-values-in-data_frame" class="md-nav__link">
+    Round values  in data_frame
+  </a>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#drop-the-null-values-only-in-the-selected-columns" class="md-nav__link">
     Drop the null values ONLY in the selected columns
@@ -234,6 +268,13 @@
         <li class="md-nav__item">
   <a href="#select-multiple-columns-from-existing-dataframe" class="md-nav__link">
     Select Multiple Columns From Existing Dataframe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-column-with-value-depending-on-multiple-conditions" class="md-nav__link">
+    New column with value depending on multiple conditions
   </a>
   
 </li>
@@ -269,6 +310,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../sql/" title="SQL" class="md-nav__link">
+      SQL
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -295,6 +348,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#display-all-the-rows-of-a-pandas-dataframe" class="md-nav__link">
+    Display ALL the rows of a Pandas DataFrame
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-all-the-contents-in-the-rows-of-a-pandas-dataframe" class="md-nav__link">
+    Display ALL the contents in the rows of a Pandas DataFrame
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#drop-null-values" class="md-nav__link">
     Drop Null Values
   </a>
@@ -312,6 +379,26 @@
           <li class="md-nav__item">
   <a href="#drop-null-values-only-if-all-values-are-null-in-a-row" class="md-nav__link">
     Drop null values only if ALL values are null in a row:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#percentage-of-a-dataframe" class="md-nav__link">
+    Percentage of a DataFrame
+  </a>
+  
+    <nav class="md-nav" aria-label="Percentage of a DataFrame">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#round-values-in-data_frame" class="md-nav__link">
+    Round values  in data_frame
   </a>
   
 </li>
@@ -335,6 +422,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#new-column-with-value-depending-on-multiple-conditions" class="md-nav__link">
+    New column with value depending on multiple conditions
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -352,6 +446,18 @@
                 
                 
                 <h1 id="_1"></h1>
+<h2 id="display-all-the-rows-of-a-pandas-dataframe">Display ALL the rows of a Pandas DataFrame</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_row&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="display-all-the-contents-in-the-rows-of-a-pandas-dataframe">Display ALL the contents in the rows of a Pandas DataFrame</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_colwidth&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
 <h2 id="drop-null-values">Drop Null Values</h2>
 <h4 id="drop-the-rows-in-which-any-value-is-null">Drop the rows in which ANY value is <code>null</code>:</h4>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">data_frame</span> <span class="o">=</span> <span class="n">data_frame</span><span class="o">.</span><span class="n">na</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;any&quot;</span><span class="p">)</span>
@@ -361,6 +467,20 @@
 <hr />
 <h4 id="drop-null-values-only-if-all-values-are-null-in-a-row">Drop <code>null</code> values only if ALL values are <code>null</code> in a row:</h4>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">na</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="percentage-of-a-dataframe">Percentage of a DataFrame</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df1</span><span class="p">[</span><span class="s1">&#39;percentage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df1</span><span class="p">[</span><span class="s1">&#39;Mathematics_score&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">df1</span><span class="p">[</span><span class="s1">&#39;Mathematics_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h4 id="round-values-in-data_frame">Round values  in data_frame</h4>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">x</span><span class="p">[</span><span class="s1">&#39;percentage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">x_1</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;round(all_dates_fraction_greater_than_zero_reqs, 2)&#39;</span><span class="p">])</span>
 </code></pre></div>
 </td></tr></table>
 
@@ -376,6 +496,40 @@
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">list_of_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;col_name_1&#39;</span><span class="p">,</span> <span class="s1">&#39;col_name_2&#39;</span><span class="p">,</span> <span class="s1">&#39;col_name_n&#39;</span><span class="p">]</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;list_of_columns&#39;</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="new-column-with-value-depending-on-multiple-conditions">New column with value depending on multiple conditions</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Create list with the conditions</span>
+<span class="n">conditions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;col_name&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;col_name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;col_name&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">]</span>
+
+<span class="c1"># Create a list with the values corresponding to each condition</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">]</span>
+
+<span class="c1"># New column &#39;color&#39; whose value depends on the conditions in the list above</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">conditions</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h1 id="filter-dataframe-based-on-a-column-values">Filter DataFrame based on a column values</h1>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">new_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">col_name</span> <span class="o">==</span> <span class="s1">&#39;condition&#39;</span><span class="p">]</span>
 </code></pre></div>
 </td></tr></table>
                 
