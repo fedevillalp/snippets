@@ -261,6 +261,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#add-a-new-column-with-a-string" class="md-nav__link">
+    Add a new column with a String
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -321,6 +328,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#add-a-new-column-with-a-string" class="md-nav__link">
+    Add a new column with a String
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -344,7 +358,7 @@
 3
 4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">datediff</span><span class="p">(</span>
          <span class="n">to_date</span><span class="p">(</span><span class="n">String</span> <span class="n">column_with_timestamp_1</span><span class="p">),</span>
-         <span class="n">to_date</span><span class="p">(</span><span class="n">String</span> <span class="n">column_with_timestamp_1</span><span class="p">)</span>
+         <span class="n">to_date</span><span class="p">(</span><span class="n">String</span> <span class="n">column_with_timestamp_2</span><span class="p">)</span>
          <span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
@@ -374,6 +388,11 @@
     <span class="n">WHEN</span> <span class="n">column_name_3</span> <span class="n">LIKE</span> <span class="s1">&#39;begins_with_some_text%&#39;</span> <span class="n">THEN</span> <span class="s1">&#39;result_3&#39;</span>
     <span class="n">ELSE</span> <span class="s1">&#39;Other&#39;</span>
     <span class="n">END</span> <span class="n">AS</span> <span class="n">new_column_name</span><span class="p">,</span>
+</code></pre></div>
+</td></tr></table>
+
+<h2 id="add-a-new-column-with-a-string">Add a new column with a String</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">cast</span><span class="p">(</span><span class="s1">&#39;my_string&#39;</span> <span class="k">as</span> <span class="n">VARCHAR</span><span class="p">)</span> <span class="n">AS</span> <span class="n">new_column_name</span>
 </code></pre></div>
 </td></tr></table>
                 

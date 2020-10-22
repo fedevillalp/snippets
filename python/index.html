@@ -233,6 +233,19 @@
     List files in current directory
   </a>
   
+    <nav class="md-nav" aria-label="List files in current directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-to-create-a-list-to-be-used-in-where-in-in-an-sql-query" class="md-nav__link">
+    Function to create a list to be used in 'WHERE IN' in an SQL query
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -290,6 +303,19 @@
   <a href="#list-files-in-current-directory" class="md-nav__link">
     List files in current directory
   </a>
+  
+    <nav class="md-nav" aria-label="List files in current directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-to-create-a-list-to-be-used-in-where-in-in-an-sql-query" class="md-nav__link">
+    Function to create a list to be used in 'WHERE IN' in an SQL query
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -377,6 +403,23 @@ Reference: https://python-guide-ru.readthedocs.io/en/latest/dev/virtualenvs.html
 
 <p>If you need to list files in a directory other than the present working directory:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="nb">file</span> <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">another_directory</span><span class="p">,</span> <span class="nb">file</span><span class="p">))]</span>
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="function-to-create-a-list-to-be-used-in-where-in-in-an-sql-query">Function to create a list to be used in 'WHERE IN' in an SQL query</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">format_list</span><span class="p">(</span><span class="n">pandas_series</span><span class="p">):</span>
+    <span class="c1">#Takes in a pandas series, returns a string formated to use with &#39;WHERE IN&#39; in our SQL query</span>
+    <span class="nb">list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">pandas_series</span><span class="p">:</span>
+        <span class="nb">list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;[&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;]&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">res</span>
 </code></pre></div>
 </td></tr></table>
                 
