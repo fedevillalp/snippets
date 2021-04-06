@@ -1,0 +1,23 @@
+google_analytics:
+  - G-6M4L5Z4FKC
+  - auto
+site_name: Syntax Fragments
+nav:
+    - Welcome: index.md
+    - Pandas: pandas.md
+    - Pyspark: pyspark.md
+    - Python: python.md
+    - SQL: sql.md
+theme: material
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+      linenums: true
+      linenums_style: pymdownx.inline
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.critic
+  - attr_list
+  - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
